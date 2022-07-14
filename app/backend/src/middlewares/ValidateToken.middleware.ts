@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import JWT from '../../src/ultils/Jwt';
+import JWT from '../ultils/Jwt';
 
 const validateToken = (req: Request, res: Response, next: NextFunction) => {
   const { authorization } = req.headers;

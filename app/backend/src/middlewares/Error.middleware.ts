@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import GenericError from '../../src/ultils/GenericError';
+import GenericError from '../ultils/GenericError';
 
 const error = (err: GenericError, _req: Request, res: Response, _next: NextFunction) => {
   if (err.status) return res.status(err.status).json({ message: err.message });

@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import validateLoginBody from '../middlewares/ValidateLoginBody.middleware';
-import Controller from '../../src/MSC/controllers/UserController';
+import Controller from '../MSC/controllers/UserController';
 import validateToken from '../middlewares/ValidateToken.middleware';
 
 const routes = Router();
