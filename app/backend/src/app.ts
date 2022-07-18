@@ -1,8 +1,10 @@
+// import * as cors from 'cors';
 import * as express from 'express';
 import error from './middlewares/ErrorMiddleware';
-import User from './routers/UserRouter';
-import Team from './routers/TeamRouter';
-import Match from './routers/MatchRouter';
+// import User from './routers/UserRouter';
+// import Team from './routers/TeamRouter';
+// import Match from './routers/MatchRouter';
+import routes from './routers';
 
 class App {
   public app: express.Express;
@@ -25,10 +27,12 @@ class App {
     };
 
     this.app.use(express.json());
+    // this.app.use(cors());
     this.app.use(accessControl);
-    this.app.use(User);
-    this.app.use(Team);
-    this.app.use(Match);
+    // this.app.use(User);
+    // this.app.use(Team);
+    // this.app.use(Match);
+    this.app.use(routes);
     this.app.use(error);
   }
 
