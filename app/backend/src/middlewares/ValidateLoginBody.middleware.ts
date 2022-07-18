@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import schema from '../schemas/LoginSchema';
+import schema from '../schemas/Login.schema';
 
 const validateLoginBody = (req: Request, res: Response, next: NextFunction) => {
   const { email, password } = req.body;

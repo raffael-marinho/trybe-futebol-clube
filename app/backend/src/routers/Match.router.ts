@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import validateToken from '../middlewares/ValidateTokenMiddleware';
-import Controller from '../MSC/controllers/MatchController';
-import validateMatchBody from '../middlewares/ValidateMatchBodyMiddleware';
+import validateToken from '../middlewares/ValidateToken.middleware';
+import Controller from '../MSC/controllers/Match.controller';
+import validateMatchBody from '../middlewares/ValidateMatchBody.middleware';
 
 const routes = Router();
 

@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import Controller from '../MSC/controllers/LeaderboardController';
+import Controller from '../MSC/controllers/Leaderboard.Controller';
 // import validateToken from '../middlewares/validateToken.middleware';
 
 const routes = Router();

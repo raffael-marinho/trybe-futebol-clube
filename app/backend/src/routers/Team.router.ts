@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import Controller from '../MSC/controllers/TeamController';
+import Controller from '../MSC/controllers/Team.controller';
 
 const routes = Router();
 

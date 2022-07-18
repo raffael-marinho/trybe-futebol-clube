@@ -1,21 +1,22 @@
 import { Request, Response, NextFunction } from 'express';
-import Service from '../services/LeaderboardService';
+import Service from '../services/Team.service';
 
 export default class Controller {
   private service = new Service();
 
-  getHome = async (_req: Request, res: Response, next: NextFunction) => {
+  getAll = async (_req: Request, res: Response, next: NextFunction) => {
     try {
-      const teams = await this.service.getHome();
+      const teams = await this.service.getAll();
       return res.status(200).json(teams);
     } catch (error) {
       next(error);
     }
   };
 
-  getAway = async (_req: Request, res: Response, next: NextFunction) => {
+  getById = async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const teams = await this.service.getAway();
+      const { id } = req.params;
+      const teams = await this.service.getById(id);
       return res.status(200).json(teams);
     } catch (error) {
       next(error);

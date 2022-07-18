@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import Service from '../services/MatchService';
+import Service from '../services/Match.service';
 
 export default class Controller {
   private service = new Service();

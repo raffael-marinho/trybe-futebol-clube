@@ -1,6 +1,6 @@
 // import * as cors from 'cors';
 import * as express from 'express';
-import error from './middlewares/ErrorMiddleware';
+import error from './middlewares/Error.middleware';
 // import User from './routers/UserRouter';
 // import Team from './routers/TeamRouter';
 // import Match from './routers/MatchRouter';

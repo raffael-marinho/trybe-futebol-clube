@@ -32,7 +32,7 @@ export default class Service {
     return data;
   };
 
-  calcPoints = (matches: any, local: string) => {
+  calcPoints = (matches: any[], local: string) => {
     const points = matches.reduce((acc: any, curr: any) => {
       const info = { ...initInfo };
       info.name = curr.teamName;
