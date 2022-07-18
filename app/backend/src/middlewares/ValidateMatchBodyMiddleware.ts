@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import schema from '../schemas/Match.schema';
+import schema from '../schemas/MatchSchema';
 
 const validateMatchBody = (req: Request, res: Response, next: NextFunction) => {
   const { homeTeam, awayTeam, homeTeamGoals, awayTeamGoals } = req.body;
