@@ -9,6 +9,7 @@ export default class Controller {
       const { inProgress } = req.query;
       let isInProgress;
       if (inProgress) isInProgress = inProgress === 'true';
+      // console.log(inProgress);
       const matches = await this.service.getAll(isInProgress);
 
       return res.status(200).json(matches);
@@ -20,10 +21,17 @@ export default class Controller {
   create = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const { homeTeam, awayTeam, homeTeamGoals, awayTeamGoals } = req.body;
-      const match = await this.service.create({ homeTeam, awayTeam, homeTeamGoals, awayTeamGoals });
+      const match = await this.service.create({
+        homeTeam,
+        awayTeam,
+        homeTeamGoals,
+        awayTeamGoals,
+        inProgress: false,
+      });
 
       return res.status(201).json(match);
     } catch (error) {
+      console.log(error);
       next(error);
     }
   };

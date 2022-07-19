@@ -1,3 +1,8 @@
+// import { Matches } from 'webdriverio';
+
+// import Team from '../database/models/Teams';
+import Match from '../database/models/Matches';
+
 export default class LeaderboardModel {
   name: string;
   totalPoints: number;
@@ -32,7 +37,7 @@ export default class LeaderboardModel {
     return 0;
   };
 
-  setLeader3(array: any[]) {
+  setLeader3(array: Match[]) {
     this.setLeader(array);
     this.setLeader2(array);
   }

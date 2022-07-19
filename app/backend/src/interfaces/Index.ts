@@ -34,7 +34,7 @@ export type IMatch = {
   }
 };
 
-export type IMatchData = Omit<IMatch, 'id' | 'inProgress' | 'teamHome' | 'teamAway'>;
+export type IMatchData = Omit<IMatch, 'id' | 'teamHome' | 'teamAway'>;
 
 export type IGoals = {
   homeTeamGoals: number,
